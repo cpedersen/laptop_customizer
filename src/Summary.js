@@ -4,7 +4,6 @@ import SummaryOption from './SummaryOption';
 
 class Summary extends Component {
     render() {
-        console.log("Made it inside Summary")
         return (
           <section className="main__summary">
             <h2>Your cart</h2>

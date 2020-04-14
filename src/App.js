@@ -2,15 +2,9 @@ import React, { Component } from 'react';
 import Heading from './Heading';
 import Summary from './Summary';
 import Feature from './Feature';
-
-// Normalizes string as a slug - a string that is safe to use
-// in both URLs and html attributes
 import slugify from 'slugify';
-
 import './App.css';
 
-// This object will allow us to
-// easily convert numbers into US dollar values
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
   style: 'currency',
   currency: 'USD'
@@ -39,7 +33,6 @@ class App extends Component {
   };
 
   updateFeature = (feature, newValue) => {
-    console.log("Made it inside App");
     const selected = Object.assign({}, this.state.selected);
     selected[feature] = newValue;
     this.setState({

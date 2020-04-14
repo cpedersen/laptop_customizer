@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 
 function Heading() {
-    console.log("Made it inside Heading");
-    
     return (
         <div>
             <header>

@@ -3,7 +3,6 @@ import slugify from 'slugify';
 
 class FeatureOption extends Component {
     render() {
-        console.log("Made it inside Feature_Option")
         return (
             <div key={this.props.itemHash} className="feature__item">
             <input
