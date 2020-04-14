@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Heading from './Heading';
 import Summary from './Summary';
 import Feature from './Feature';
-import slugify from 'slugify';
 import './App.css';
 
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
