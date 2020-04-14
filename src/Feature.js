@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import slugify from 'slugify';
-import Feature_Item from './Feature_Item';
-import Feature_Option from './FeatureOption';
+import FeatureItem from './FeatureItem';
+import FeatureOption from './FeatureOption';
 
 class Feature extends Component {
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Summary_Total from './Summary_Total';
-import Summary_Option from './Summary_Option';
+import SummaryTotal from './SummaryTotal';
+import SummaryOption from './SummaryOption';
 
 class Summary extends Component {
     render() {
