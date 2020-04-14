@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import Heading from './Heading';
 import Summary from './Summary';
-import Summary_Total from './Summary_Total';
-import Summary_Option from './Summary_Option';
 import Feature from './Feature';
-import Feature_Item from './Feature_Item';
-import Feature_Option from './Feature_Option';
 
 // Normalizes string as a slug - a string that is safe to use
 // in both URLs and html attributes
@@ -52,56 +48,19 @@ class App extends Component {
   };
 
   render() {
-    console.log("Feature_Item");
-
-    const features = Object.keys(this.props.features).map((feature, idx) => {
-      console.log("Feature: " + feature + " Index: " + idx);
-      const featureHash = feature + '-' + idx;
-      const options = this.props.features[feature].map(item => {
-        const itemHash = slugify(JSON.stringify(item));
-        return (
-          <div key={itemHash} className="feature__item">
-            <input
-              type="radio"
-              id={itemHash}
-              className="feature__option"
-              name={slugify(feature)}
-              checked={item.name === this.state.selected[feature].name}
-              onChange={e => this.updateFeature(feature, item)}
-            />
-            <label htmlFor={itemHash} className="feature__label">
-              {item.name} ({USCurrencyFormat.format(item.cost)})
-            </label>
-          </div>
-        );
-      });
-
-      console.log("Feature")
-      return (
-        <fieldset className="feature" key={featureHash}>
-          <legend className="feature__name">
-            <h3>{feature}</h3>
-          </legend>
-          {options}
-        </fieldset>
-      );
-    });
-
-    //Move lines 97 to 101 to Summary component
-    console.log("Summary_Total")
     return (
       <div className="App">
         <Heading/>
         <main>
           <form className="main__form">
             <h2>Customize your laptop</h2>
-            {features}
+            <Feature 
+              features={this.props.features} 
+              selected={this.state.selected} 
+              updateFeature={this.updateFeature}
+              USCurrencyFormat={USCurrencyFormat}/>
           </form>
-          <section className="main__summary">
-            <h2>Your cart</h2>
-            <Summary selected={this.state.selected} USCurrencyFormat={USCurrencyFormat}/>
-          <Summary_Total selected={this.state.selected} USCurrencyFormat={USCurrencyFormat}/>
-          </section>
+          <Summary selected={this.state.selected} USCurrencyFormat={USCurrencyFormat}/>
         </main>
       </div>
     );
@@ -109,3 +68,5 @@ class App extends Component {
 }
 
 export default App;
+
+
