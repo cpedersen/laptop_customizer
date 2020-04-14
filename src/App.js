@@ -4,8 +4,6 @@ import Summary from './Summary';
 import Feature from './Feature';
 import './App.css';
 
-//TESTING 1 2 3...
-
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
   style: 'currency',
   currency: 'USD'
