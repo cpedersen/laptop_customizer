@@ -44,24 +44,24 @@ class Feature extends Component {
                     return (
                         <fieldset className="feature" key={featureHash}>
                             <Feature_Item feature={feature}/>
-                            {
-                            this.props.features[feature].map(item => {
-                            const itemHash = slugify(JSON.stringify(item));
-                            return (
-                                <Feature_Option 
-                                    itemHash={itemHash} 
-                                    feature={feature} 
-                                    selected={this.props.selected}
-                                    item={item}
-                                    updateFeature={this.props.updateFeature}
-                                    USCurrencyFormat={this.props.USCurrencyFormat}
-                                />
-                            );
-                            })
-                            }
+
+                            {this.props.features[feature].map(item => {
+                                const itemHash = slugify(JSON.stringify(item));
+                                return (
+                                    <Feature_Option 
+                                        itemHash={itemHash} 
+                                        feature={feature} 
+                                        selected={this.props.selected}
+                                        item={item}
+                                        updateFeature={this.props.updateFeature}
+                                        USCurrencyFormat={this.props.USCurrencyFormat}
+                                    />
+                                );
+                            })}
+
                         </fieldset>
                     );
-              })
+                })
               }</div>
         );
     }
