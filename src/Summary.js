@@ -8,8 +8,8 @@ class Summary extends Component {
         return (
           <section className="main__summary">
             <h2>Your cart</h2>
-            <Summary_Option selected={this.props.selected} USCurrencyFormat={this.props.USCurrencyFormat}/>
-          <Summary_Total selected={this.props.selected} USCurrencyFormat={this.props.USCurrencyFormat}/>
+            <SummaryOption selected={this.props.selected} USCurrencyFormat={this.props.USCurrencyFormat}/>
+          <SummaryTotal selected={this.props.selected} USCurrencyFormat={this.props.USCurrencyFormat}/>
           </section>
         )
       }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Summary_Option extends Component {
+class SummaryOption extends Component {
     render() {
         console.log("Made it inside Summary_Option")
         
@@ -24,4 +24,4 @@ class Summary_Option extends Component {
 
 }
 
-export default Summary_Option;
+export default SummaryOption;

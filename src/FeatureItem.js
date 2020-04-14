@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-function Feature_Item(props) {
+function FeatureItem(props) {
     console.log("Made it inside Feature_Item")
     return (
         <legend className="feature__name">
@@ -9,4 +9,4 @@ function Feature_Item(props) {
     )
 }
 
-export default Feature_Item;
+export default FeatureItem;

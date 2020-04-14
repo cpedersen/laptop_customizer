@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Summary_Total extends Component {
+class SummaryTotal extends Component {
     render() {
         console.log("Made it inside Summary_Total")
         
@@ -20,4 +20,4 @@ class Summary_Total extends Component {
     }
 }
 
-export default Summary_Total;
+export default SummaryTotal;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import slugify from 'slugify';
 
-class Feature_Option extends Component {
+class FeatureOption extends Component {
     render() {
         console.log("Made it inside Feature_Option")
         return (
@@ -22,6 +22,6 @@ class Feature_Option extends Component {
     }
 }
 
-export default Feature_Option;
+export default FeatureOption;
 
 

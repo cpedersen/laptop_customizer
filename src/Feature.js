@@ -43,12 +43,12 @@ class Feature extends Component {
                     const featureHash = feature + '-' + idx;
                     return (
                         <fieldset className="feature" key={featureHash}>
-                            <Feature_Item feature={feature}/>
+                            <FeatureItem feature={feature}/>
 
                             {this.props.features[feature].map(item => {
                                 const itemHash = slugify(JSON.stringify(item));
                                 return (
-                                    <Feature_Option 
+                                    <FeatureOption 
                                         itemHash={itemHash} 
                                         feature={feature} 
                                         selected={this.props.selected}
