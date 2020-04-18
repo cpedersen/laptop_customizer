@@ -17,6 +17,7 @@ class Feature extends Component {
                                 const itemHash = slugify(JSON.stringify(item));
                                 return (
                                     <FeatureOption 
+                                        key={itemHash}
                                         itemHash={itemHash} 
                                         feature={feature} 
                                         selected={this.props.selected}
